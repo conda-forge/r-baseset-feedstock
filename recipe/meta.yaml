@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BaseSet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BaseSet/BaseSet_{{ version }}.tar.gz
-  sha256: e5c6d1609ae818427e4af97516a0a879969165c43bf2f36271fc12b56ac7c436
+  sha256: 51506df115765a5a07d0ec674377ec11b0a1006c3dda7df0e82de373034156cc
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -42,10 +42,7 @@ about:
   home: https://docs.ropensci.org/BaseSet/
   dev_url: https://github.com/ropensci/BaseSet
   license: MIT
-  summary: Implements a class and methods to work with sets, doing intersection, union, complementary
-    sets, power sets, cartesian product and other set operations in a "tidy" way. These
-    set operations are available for both classical sets and fuzzy sets. Import sets
-    from several formats or from other several data structures.
+  summary: Implements a class and methods to work with sets, doing intersection, union, complementary sets, power sets, cartesian product and other set operations in a "tidy" way. These set operations are available for both classical sets and fuzzy sets. Import sets from several formats or from other several data structures.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
